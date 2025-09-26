@@ -46,5 +46,5 @@ print(az.summary(trace, var_names=["p"]))
 ## 4. Run the script
 
 ```bash
-python simple_pymc_example.py
+python simple_pymc.py
 ```

@@ -38,6 +38,7 @@ with Model() as model:  # model specifications in PyMC are wrapped in a with-sta
     sigma = HalfCauchy("sigma", beta=10)
     intercept = Normal("Intercept", 0, sigma=20)
     slope = Normal("slope", 0, sigma=20)
+    # https://www.pymc.io/projects/examples/en/latest/howto/updating_priors.html
 
     # Define likelihood
     likelihood = Normal("y", mu=intercept + slope * x, sigma=sigma, observed=y)

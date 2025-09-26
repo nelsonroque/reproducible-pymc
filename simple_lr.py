@@ -46,4 +46,7 @@ with Model() as model:  # model specifications in PyMC are wrapped in a with-sta
     # draw 3000 posterior samples using NUTS sampling
     idata = sample(3000)
     
-az.plot_trace(idata, figsize=(10, 7));
+az.plot_trace(idata, figsize=(10, 7))
+
+# save plot
+plt.savefig("trace_plot.png")
